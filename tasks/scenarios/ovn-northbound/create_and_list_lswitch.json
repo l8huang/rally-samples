@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "title": "Create logical switch",
+    "description": "Creates logical switch in OVN northbound",
+    "tags": ["ovn", "northbound"],
+   
+   
+    "subtasks": [
+        {
+            "title": "Create logical switch",
+            "group": "ovn",
+            "description": "Create 10 logical switch",
+            "tags": ["ovn", "northbound"],
+            "run_in_parallel": false,
+            
+            "workloads": [
+                {
+                    "name": "OvnNorthbound.create_and_list_lswitch",
+                    "args": {
+                        "lswitch_create_args": {
+                            "amount": 3
+                        }
+                    },
+                    "runner": {
+                        "type": "serial",
+                        "times": 1,
+                        "concurrency": 4,
+                        "max_cpu_count": 2
+                    },
+                    "context": {
+                       "ovn_multihost" : {
+                            "controller": "ovn-controller-node"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

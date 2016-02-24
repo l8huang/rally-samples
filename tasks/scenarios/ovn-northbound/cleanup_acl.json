@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "title": "Create ACLs",
+    "subtasks": [{
+        "title": "Create ACLs",
+        "workloads": [{
+            "name": "OvnNorthbound.cleanup_acl",
+            "args": {
+            },
+            "runner": { "type": "serial", "times": 1},
+            "context": {
+               "ovn_multihost" : {"controller": "ovn-controller-node"},
+               "ovn_nb": {}
+            }
+        }]
+    }]
+}

@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "title": "cleanup logical switch",
+    "subtasks": [{
+        "title": "cleanup logical switch",
+        "workloads": [{
+            "name": "OvnNorthbound.cleanup_lswitch",
+            "args": {},
+            "runner": {"type": "serial","times": 1},
+            "context": {
+               "ovn_multihost" : {"controller": "ovn-controller-node"},
+               "ovn_nb": {}
+            }
+        }]
+    }]
+}

@@ -1,41 +1,19 @@
 {
     "version": 2,
     "title": "Create logical port",
-    "description": "Creates logical port in OVN northbound",
-    "tags": ["ovn", "northbound"],
-   
-   
-    "subtasks": [
-        {
-            "title": "Create logical port",
-            "group": "ovn",
-            "description": "Creates logical port in OVN northbound",
-            "tags": ["ovn", "northbound"],
-            "run_in_parallel": false,
-            
-            "workloads": [
-                {
-                    "name": "OvnNorthbound.create_and_list_lport",
-                    "args": {
-                        "lswitch_create_args": {
-                            "amount": 2
-                        },
-                        "lport_create_args" : {},
-                        "lports_per_lswitch": 2
-                    },
-                    "runner": {
-                        "type": "serial",
-                        "times": 1,
-                        "concurrency": 4,
-                        "max_cpu_count": 2
-                    },
-                    "context": {
-                       "ovn_multihost" : {
-                            "controller": "ovn-controller-node"
-                        }
-                    }
-                }
-            ]
-        }
-    ]
+    "subtasks": [{
+        "title": "Create logical port",
+        "workloads": [{
+            "name": "OvnNorthbound.create_and_list_lport",
+            "args": {
+                "lswitch_create_args": {"amount": 20},
+                "lport_create_args" : {},
+                "lports_per_lswitch": 50
+            },
+            "runner": {"type": "serial", "times": 1},
+            "context": {
+               "ovn_multihost" : {"controller": "ovn-controller-node"}
+            }
+        }]
+    }]
 }

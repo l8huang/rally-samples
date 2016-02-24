@@ -18,10 +18,10 @@
                     "name": "OvnNetwork.create_and_bind_ports",
                     "args": {
                         "network_create_args": {
-                            "amount": 1
+                            "amount": 20
                         },
                         "port_create_args" : {},
-                        "ports_per_network": 1
+                        "ports_per_network": 20
                     },
                     "runner": {
                         "type": "serial",

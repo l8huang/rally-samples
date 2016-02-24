@@ -18,8 +18,8 @@
                     "args": {
                         "sandbox_create_args": {
                             "farm": "ovn-sandbox-node-0",
-                            "amount": 1,
-                            "batch" : 1,
+                            "amount": 100,
+                            "batch" : 10,
                             "start_cidr": "192.168.65.0/16",
                             "net_dev": "eth1"
                         }

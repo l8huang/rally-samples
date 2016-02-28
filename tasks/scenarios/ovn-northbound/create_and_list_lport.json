@@ -6,9 +6,9 @@
         "workloads": [{
             "name": "OvnNorthbound.create_and_list_lport",
             "args": {
-                "lswitch_create_args": {"amount": 20},
+                "lswitch_create_args": {"amount": 10},
                 "lport_create_args" : {},
-                "lports_per_lswitch": 50
+                "lports_per_lswitch": 150
             },
             "runner": {"type": "serial", "times": 1},
             "context": {

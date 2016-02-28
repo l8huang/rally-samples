@@ -1,27 +1,28 @@
 {
     "version": 2,
     "title": "Create sandbox",
-    "description": "Creates sandboxes farm nodes",
+    "description": "Creates sandboxes on farm nodes",
     "tags": ["ovn", "sandbox"],
-    
+
     "subtasks": [
         {
             "title": "Create sandbox on farm 0",
             "group": "ovn",
-            "description": "Create 10 sandboxes",
+            "description": "",
             "tags": ["ovn", "sandbox"],
             "run_in_parallel": false,
-            
+
             "workloads": [
                 {
                     "name": "OvnSandbox.create_sandbox",
                     "args": {
                         "sandbox_create_args": {
                             "farm": "ovn-sandbox-node-0",
-                            "amount": 100,
+                            "amount": 10,
                             "batch" : 10,
-                            "start_cidr": "192.168.65.0/16",
-                            "net_dev": "eth1"
+                            "start_cidr": "192.168.64.0/16",
+                            "net_dev": "eth1",
+                            "tag": "ToR1"
                         }
                     },
                     "runner": {

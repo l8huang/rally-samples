@@ -25,12 +25,7 @@
                             "tag": "ToR1"
                         }
                     },
-                    "runner": {
-                        "type": "constant",
-                        "concurrency": 4,
-                        "times": 1,
-                        "max_cpu_count": 2
-                    },
+                    "runner": {"type": "serial", "times": 1},
                     "context": {
                        "ovn_multihost" : {
                             "controller": "ovn-controller-node"

@@ -4,7 +4,7 @@
     "subtasks": [{
         "title": "Create ACLs",
         "workloads": [{
-            "name": "OvnNorthbound.create_and_list_acl",
+            "name": "OvnNorthbound.create_and_list_acls",
             "args": {
                 "lswitch_create_args": { "amount": 3 },
                 "lport_create_args" : {},

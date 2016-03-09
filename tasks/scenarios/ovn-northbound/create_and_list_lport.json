@@ -4,7 +4,7 @@
     "subtasks": [{
         "title": "Create logical port",
         "workloads": [{
-            "name": "OvnNorthbound.create_and_list_lport",
+            "name": "OvnNorthbound.create_and_list_lports",
             "args": {
                 "lswitch_create_args": {"amount": 10},
                 "lport_create_args" : {},

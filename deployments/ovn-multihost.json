@@ -6,6 +6,7 @@
         "http_proxy": "",
         "ovs_repo": "https://github.com/l8huang/ovs.git",
         "ovs_branch": "master",
+        "repo_action": "pull",
         "ovs_user": "rally",
         "net_dev": "eth1",
         "controller_cidr": "192.168.10.10/16",
@@ -25,6 +26,7 @@
             "ovs_repo" : "https://github.com/l8huang/ovs.git",
             "ovs_branch" : "master",
             "ovs_user" : "rally",
+            "repo_action": "pull",
             "provider": {
                 "type": "OvsSandboxProvider",
                 "credentials": [

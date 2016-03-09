@@ -1,10 +1,10 @@
 {
     "version": 2,
-    "title": "Create ACLs",
+    "title": "Cleanup ACLs",
     "subtasks": [{
-        "title": "Create ACLs",
+        "title": "Cleanup ACLs",
         "workloads": [{
-            "name": "OvnNorthbound.cleanup_acl",
+            "name": "OvnNorthbound.cleanup_acls",
             "args": {
             },
             "runner": { "type": "serial", "times": 1},

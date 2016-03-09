@@ -1,38 +1,24 @@
 {
     "version": 2,
     "title": "Create sandbox",
-    "description": "Creates sandboxes on farm nodes",
-    "tags": ["ovn", "sandbox"],
-
-    "subtasks": [
-        {
-            "title": "Create sandbox on farm 0",
-            "group": "ovn",
-            "description": "",
-            "tags": ["ovn", "sandbox"],
-            "run_in_parallel": false,
-
-            "workloads": [
-                {
-                    "name": "OvnSandbox.create_sandbox",
-                    "args": {
-                        "sandbox_create_args": {
-                            "farm": "ovn-sandbox-node-0",
-                            "amount": 10,
-                            "batch" : 10,
-                            "start_cidr": "192.168.64.0/16",
-                            "net_dev": "eth1",
-                            "tag": "ToR1"
-                        }
-                    },
-                    "runner": {"type": "serial", "times": 1},
-                    "context": {
-                       "ovn_multihost" : {
-                            "controller": "ovn-controller-node"
-                        }
-                    }
+    "subtasks": [{
+        "title": "Create sandbox on farm 0",
+        "workloads": [{
+            "name": "OvnSandbox.create_sandbox",
+            "args": {
+                "sandbox_create_args": {
+                    "farm": "ovn-sandbox-node-0",
+                    "amount": 1,
+                    "batch" : 10,
+                    "start_cidr": "192.168.64.0/16",
+                    "net_dev": "eth1",
+                    "tag": ""
                 }
-            ]
-        }
-    ]
+            },
+            "runner": {"type": "serial", "times": 1},
+            "context": {
+                "ovn_multihost" : { "controller": "ovn-controller-node"}
+            }
+        }]
+    }]
 }

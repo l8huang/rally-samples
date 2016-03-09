@@ -5,8 +5,7 @@
         "title": "Cleanup ACLs",
         "workloads": [{
             "name": "OvnNorthbound.cleanup_acls",
-            "args": {
-            },
+            "args": {},
             "runner": { "type": "serial", "times": 1},
             "context": {
                "ovn_multihost" : {"controller": "ovn-controller-node"},

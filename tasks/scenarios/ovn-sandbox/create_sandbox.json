@@ -8,11 +8,11 @@
             "args": {
                 "sandbox_create_args": {
                     "farm": "ovn-sandbox-node-0",
-                    "amount": 1,
+                    "amount": 2,
                     "batch" : 10,
                     "start_cidr": "192.168.64.0/16",
                     "net_dev": "eth1",
-                    "tag": ""
+                    "tag": "ToR1"
                 }
             },
             "runner": {"type": "serial", "times": 1},

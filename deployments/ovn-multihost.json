@@ -6,7 +6,7 @@
         "http_proxy": "",
         "ovs_repo": "https://github.com/l8huang/ovs.git",
         "ovs_branch": "master",
-        "repo_action": "pull",
+        "repo_action": "",
         "ovs_user": "rally",
         "net_dev": "eth1",
         "controller_cidr": "192.168.10.10/16",
@@ -26,12 +26,28 @@
             "ovs_repo" : "https://github.com/l8huang/ovs.git",
             "ovs_branch" : "master",
             "ovs_user" : "rally",
-            "repo_action": "pull",
+            "repo_action": "",
             "provider": {
                 "type": "OvsSandboxProvider",
                 "credentials": [
                     {
                         "host": "192.168.20.20",
+                        "user": "root"}
+                ]
+            }
+        },
+        {
+            "type": "OvnSandboxFarmEngine",
+            "deployment_name": "ovn-sandbox-node-1",
+            "ovs_repo" : "https://github.com/l8huang/ovs.git",
+            "ovs_branch" : "master",
+            "ovs_user" : "rally",
+            "repo_action": "pull",
+            "provider": {
+                "type": "OvsSandboxProvider",
+                "credentials": [
+                    {
+                        "host": "192.168.20.30",
                         "user": "root"}
                 ]
             }

@@ -7,13 +7,13 @@
             "name": "OvnNetwork.create_and_bind_ports",
             "args": {
                 "network_create_args": {
-                    "amount": 2,
+                    "amount": 1,
                     "batch": 1,
                     "start_cidr": "172.16.1.0/24",
                     "physical_network": "providernet"
                 },
                 "port_create_args" : {"batch": 2},
-                "ports_per_network": 3,
+                "ports_per_network": 1,
                 "port_bind_args": {"wait_up": true}
             },
             "runner": {
